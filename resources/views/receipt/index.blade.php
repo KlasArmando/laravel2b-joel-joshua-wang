@@ -13,7 +13,7 @@
     <!-- Styles -->
     <style>
         html, body {
-            background-color: #fff;
+            background: linear-gradient(to right, darkslategrey , white);
             color: #636b6f;
             font-family: 'Raleway', sans-serif;
             font-weight: 100;
@@ -65,54 +65,6 @@
     </style>
 </head>
 <body>
-<div class="flex-center position-ref full-height">
-    @if (Route::has('login'))
-        <div class="top-right links">
-            @auth
-                <a href="{{ url('/home') }}">Home</a>
-            @else
-                <a href="{{ route('login') }}">Login</a>
-                <a href="{{ route('register') }}">Register</a>
-            @endauth
-        </div>
-    @endif
-
-    <div class="content">
-        <div class="title m-b-md">
-            Welcome Person
-        </div>
-    </div>
-</div>
-
-        <table border = "1">
-            <tr>
-                <td>Receipts</td>
-            </tr>
-
-            @foreach($receipts as $receipt)
-                <tr>
-
-
-                    <td>{{$receipt->receipt}}<br/><br/></td>
-                    <td><a style="color: darkviolet;" href="{{url('/receipt/'.'edit/'.$receipt->id)}}">Edit</a></td>
-                    <td>  <form action="{{url('receipt/'.$receipt->id) }}" method="POST">
-                            {{ csrf_field() }}
-                            {{ method_field('DELETE') }}
-                            <button>Delete</button>
-                        </form>
-
-
-
-
-                    </td>
-                </tr>
-
-
-            @endforeach
-
-
-        </table>
-    </div>
-</div>
+<img src="{{ asset('img/logo_colly-01.jpg') }}" alt="no" style="width: 500px; height: 500px;">
 </body>
 </html>
