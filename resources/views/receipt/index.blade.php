@@ -65,6 +65,6 @@
     </style>
 </head>
 <body>
-<img src="{{ asset('img/logo_colly-01.jpg') }}" alt="no" style="width: 500px; height: 500px;">
+<img src="{{ asset('img/logo_colly-01.jpg') }}" alt="no" style="width: 250px; height: 250px;">
 </body>
 </html>
