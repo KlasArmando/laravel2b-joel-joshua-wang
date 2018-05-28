@@ -9,6 +9,7 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <link href="{{asset ('css/styles.css')}}" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
     <style>
@@ -66,5 +67,12 @@
 </head>
 <body>
 <img src="{{ asset('img/logo_colly-01.jpg') }}" alt="no" style="width: 250px; height: 250px;">
+
+<div class="nav">
+<ul>
+    <li> <a href="{{asset ('books')}}"> Joel</a></li>
+</ul>
+</div>
+
 </body>
 </html>
