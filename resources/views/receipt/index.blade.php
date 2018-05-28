@@ -14,7 +14,7 @@
     <!-- Styles -->
     <style>
         html, body {
-            background: linear-gradient(to right, darkslategrey , white);
+            background: linear-gradient(to right, dimgrey , white);
             color: #636b6f;
             font-family: 'Raleway', sans-serif;
             font-weight: 100;
@@ -66,7 +66,7 @@
     </style>
 </head>
 <body>
-<<<<<<< HEAD
+
 <img src="{{ asset('img/logo_colly-01.jpg') }}" alt="no" style="width: 250px; height: 250px;">
 
 <div class="nav">
@@ -75,9 +75,5 @@
 </ul>
 </div>
 
-=======
-<img src="{{ asset('img/logo_colly-01.jpg') }}" alt="no" style="width: 500px; height: 500px;">
-
->>>>>>> aff511288dc1f57d393b5287fa445f4dae114785
 </body>
 </html>
