@@ -35,10 +35,26 @@ class ProjectController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
+     *
+     *
      */
+
+    public function contact()
+    {
+        return view('contact');
+    }
+
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email',
+            'message' => 'required'
+        ]);
+
+        project::create($request->all());
+
+        return back()->with('success', 'Thanks for contacting us!');
     }
 
     /**

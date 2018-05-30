@@ -6,13 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class project extends Model
 {
-    //fillable fields
-    protected $fillable = ['email'];
-    protected $fillable2 = ['password'];
+    public $table = 'contact';
+
+    public $fillable = ['name','email','message'];
 
     //custom timestamps name
     const CREATED_AT = 'created_at';
 
-    public $table = "users";
 //
 }
