@@ -9,11 +9,12 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <link href="{{asset ('css/styles.css')}}" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
     <style>
         html, body {
-            background-color: #fff;
+            background: linear-gradient(to right, dimgrey , white);
             color: #636b6f;
             font-family: 'Raleway', sans-serif;
             font-weight: 100;
@@ -65,46 +66,39 @@
     </style>
 </head>
 <body>
-<div class="flex-center position-ref full-height">
-    @if (Route::has('login'))
-        <div class="top-right links">
-            @auth
-                <a href="{{ url('/home') }}">Home</a>
-            @else
-                <a href="{{ route('login') }}">Login</a>
-                <a href="{{ route('register') }}">Register</a>
-            @endauth
-        </div>
-    @endif
 
-    <div class="content">
-        <div class="title m-b-md">
-            Welcome Person
-        </div>
+<img src="{{ asset('img/logo_colly-01.jpg') }}" alt="no" style="width: 250px; height: 250px;">
+
+<div class="nav">
+    <ul>
+        <li> <a href="{{asset ('books')}}"> Joel</a></li>
+    </ul>
+</div>
+
+@foreach($projects as $project)
 
 
-        <table>
-            <tr>
-                <td style="color:black  ">{{$receipt->ingredients}}</td>
-            </tr>
-        </table>
-
-        <form action="{{ route('receipt.update', $receipt->id) }}" method="POST">
+        <form action="{{ route('project.update', $project->id) }}" method="POST">
             {{ csrf_field() }}
             <div class="form-group">
-                <label class="control-label col-sm-2" >Edit Ingredient</label>
+                <label class="control-label col-sm-2" >Edit Information</label>
                 <div class="col-sm-10">
-                    <textarea name="ingredients" id="ingredients" class="form-control" value="{{$receipt->ingredients}}"> </textarea>
+                    <textarea name="name" id="project" class="form-control" value="{{$project->name}}"> </textarea>
+                    <textarea name="email" id="project" class="form-control" value="{{$project->email}}"> </textarea>
+                    <textarea name="message" id="project" class="form-control" value="{{$project->message}}"> </textarea>
                 </div>
             </div>
 
             <div>
                 <div>
-                    <input type="submit" value="Update Ingredient" />
+                    <input type="submit" value="Update Information" />
                 </div>
             </div>
         </form>
-    </div>
-</div>
+
+
+        @endforeach
+
+
 </body>
 </html>
