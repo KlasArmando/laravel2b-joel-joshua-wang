@@ -16,7 +16,7 @@ class CreateCategoriesTable extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('categories_id');
             $table->string('weather', 100);
-            $table->string('top_10', 100);
+            $table->string('top_10', 25);
             $table->string('ocassion', 100);
             $table->timestamps();
         });
