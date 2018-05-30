@@ -1,7 +1,103 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: suboy
- * Date: 30-5-2018
- * Time: 17:26
- */
+<!doctype html>
+<html lang="{{ app()->getLocale() }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Laravel</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <link href="{{asset ('css/styles.css')}}" rel="stylesheet" type="text/css">
+
+    <!-- Styles -->
+    <style>
+        html, body {
+            background: linear-gradient(to right, dimgrey , white);
+            color: #636b6f;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 100;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .full-height {
+            height: 100vh;
+        }
+
+        .flex-center {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .position-ref {
+            position: relative;
+        }
+
+        .top-right {
+            position: absolute;
+            right: 10px;
+            top: 18px;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .title {
+            font-size: 84px;
+        }
+
+        .links > a {
+            color: #636b6f;
+            padding: 0 25px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .m-b-md {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<img src="{{ asset('img/logo_colly-01.jpg') }}" alt="no" style="width: 250px; height: 250px;">
+
+<div class="nav">
+    <ul>
+        <li> <a href="{{asset ('books')}}"> Joel</a></li>
+    </ul>
+</div>
+<table id="allContact">
+    <th>Name</th>
+    <th>Email</th>
+    <th>Message</th>
+    <tr>
+
+        <td>{{$project->name}}</td>
+        <td>{{$project->email}}</td>
+        <td>{{$project->message}}</td>
+        <td>
+
+
+
+
+
+
+            <a href="{{url('/project/'.'update/'.$project->id)}}">
+                <button>Edit</button>
+            </a>
+
+            <button type="button" class="btn btn-danger">Delete</button>
+        </td>
+    </tr>
+
+</table>
+</body>
+</html>

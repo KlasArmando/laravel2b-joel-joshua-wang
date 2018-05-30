@@ -50,9 +50,10 @@ Route::post('/users/update/{id}', 'UsersController@update')->name('users.update'
 Route::get('users/create', 'UsersController@create')->name('users.create');
 Route::delete('/users/{id}', 'UsersController@destroy');
 
-Route::get('/project', 'ProjectController@index')->name('receipt.index');
-Route::get('/receipt/edit/{id}', 'ReceiptsController@edit')->name('receipt.edit');
-Route::post('/receipt/update/{id}', 'ReceiptsController@update')->name('receipt.update');
-Route::get('/receipt/contact', 'ReceiptsController@create')->name('receipt.create');
-Route::post('/receipt', 'ReceiptsController@store')->name('receipt.store');
-Route::delete('/receipt/{id}', 'ReceiptsController@destroy');
+Route::get('/project', 'ProjectController@index')->name('project.index');
+Route::get('/project/edit/{id}', 'ProjectController@edit')->name('project.edit');
+Route::get('/project/allcontact/{id}', 'ProjectController@allcontact')->name('project.allcontact');
+Route::post('/project/update/{id}', 'ProjectController@update')->name('project.update');
+Route::get('/project/contact', 'ProjectController@create')->name('project.create');
+Route::post('/project', 'ProjectController@store')->name('project.store');
+Route::delete('/project/{id}', 'ProjectController@destroy');

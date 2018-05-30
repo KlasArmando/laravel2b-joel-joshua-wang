@@ -25,3 +25,40 @@ li a:hover:not(.active) {
 .active {
     background-color: #4CAF50;
 }
+
+h1{
+    color: black;
+    text-align: center;
+}
+.contact{
+    text-align: center;
+    color:black;
+    font-size: 25px;
+}
+
+.goButton{
+    text-align: center;
+}
+#allContact {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#allContact td, #allContact th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    color: black;
+}
+
+#allContact tr:nth-child(even){background-color: #f2f2f2;}
+
+#allContact tr:hover {background-color: grey;}
+
+#allContact th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: lightgrey;
+    color: black;
+}
