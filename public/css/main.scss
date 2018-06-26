@@ -1,0 +1,400 @@
+
+//backgroundcolors
+$background-color: linear-gradient(to right, dimgrey , white);
+
+//colors
+$color_dodger: #2196f3;
+$white_80: rgba(255, 255, 255, 0.8);
+$black_80: rgba(0, 0, 0, 0.8);
+
+$concrete: #f2f2f2;
+$black: black;
+$color: blue;
+$white: #fff;
+$mercury: #e5e5e5;
+$black_5: rgba(0,0,0,.05);
+$color_red_berry: #990000;
+$color_cerulean: #00a2d1;
+$color_alto: #dcdcdc;
+$color_alabaster: #f9f9f9;
+$black_20: rgba(0,0,0,0.2);
+$color_mountain: #1abc9c;
+$seashell: #f1f1f1;
+$color_mine: #333;
+$color_tower_gray: #aab8c2;
+$color_amaranth: #e2264d;
+
+//fonts
+$font_0: Tahoma;
+$font_1: Geneva;
+$font_2: sans-serif;
+$font_0: sans-serif;
+//@extend-elements
+%extend_1 {
+  font-size: 16px;
+  height: 45px;
+  padding: 7px 9px;
+}
+
+
+
+html, body{
+  background: $background-color;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+a{
+  color: $color;
+}
+
+.main {
+  flex: 70%;
+  background-color: $white;
+  padding: 20px;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: $color_mountain;
+  color: $white;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.side {
+  flex: 30%;
+  background-color: $seashell;
+  padding: 20px;
+}
+
+.clothing img{
+  position: relative;
+  padding: 5px;
+  width: 150px;
+  height: 150px
+}
+
+.postImg{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  vertical-align: middle;
+  bottom: 25%;
+  left: 48%;
+}
+
+
+.postText{
+
+}
+.postSmall{
+  position: relative;
+  top: 64px;
+  left: -280px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: $color_mine ;
+}
+
+li {
+  float: left;
+
+}
+
+li a {
+  display: block;
+  color: $white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: $color_mine;
+}
+
+
+li a:hover:not(.active) {
+  background-color: $white;
+}
+
+.active {
+  background-color: $white;
+}
+
+h1 {
+  color: $black;
+  text-align: center;
+}
+
+.contact {
+  text-align: center;
+  color: $black;
+  font-size: 25px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: $color_alabaster;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 $black_20;
+  padding: 12px 16px;
+  z-index: 1;
+  top: 52px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+
+}
+.goButton {
+  text-align: center;
+}
+
+.logo{
+  width: 150px;
+  height: 150px;
+  position:relative;
+  right: 26em;
+}
+
+.topnav{
+  position: relative;
+  right: 2em;
+}
+@media screen and(max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+  .navbar {
+    flex-direction: column;
+  }
+}
+
+@media screen and(min-width: 375px) and(max-width: 667px) and(orientation: portrait) {
+  html {
+    width: 100%;
+  }
+  .topnav {
+    width: 100%;
+    ul {
+      display: block;
+      padding: 0;
+      text-align: center;
+      li {
+        padding: 0;
+        margin-bottom: 8px;
+        margin-top: 8px;
+      }
+    }
+  }
+  .overview {
+    display: grid;
+    margin-left: 12%;
+    width: 100%;
+  }
+  .logo{
+    left: 10em;
+  }
+
+  }
+
+
+footer{
+  position: absolute;
+  left:2px;
+  bottom:-234px;
+  width:100%;
+  height:60px;
+  background: $background-color;
+}
+
+.form-signin {
+  max-width: 500px;
+  padding: 19px 29px 29px;
+  margin: 0 auto;
+  background-color: $white;
+  border: 1px solid $mercury;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px $black_5;
+  font-family: $font_0, $font_1, $font_2;
+  color: $color_red_berry;
+  font-weight: lighter;
+  position: relative;
+  left: 10em;
+
+  .form-signin-heading {
+    color: $color_cerulean;
+  }
+
+  input[type="password"] {
+    @extend %extend_1;
+  }
+
+  input[type="email"] {
+    @extend %extend_1;
+  }
+}
+
+.adminNav li a{
+  display: block;
+  color: black;
+}
+
+.terms{
+position: relative;
+  width: 25%;
+  height: 100%;
+  left: 52em;
+  top: 1em;
+}
+
+.bottomBorder{
+  border-bottom: 3px solid
+}
+
+.centerPost{
+  position: relative;
+  top: 15%;
+  left: 15%;
+
+}
+
+[id='toggle-heart'] {
+  position: absolute;
+  left: -100vw;
+}
+
+[for='toggle-heart'] {
+  color: $color_tower_gray;
+}
+[id='toggle-heart']:checked + label {
+  color: $color_amaranth;
+}
+[for='toggle-heart'] {
+   font-size: 2em;
+   cursor: pointer;
+  position:relative;
+  left: 950px;
+ }
+
+[for='toggle-heart'] {
+  align-self: center;
+}
+
+.adminTable{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.adminTable td, .adminTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.adminTable tr:nth-child(even) {
+  background-color: $concrete;
+}
+
+
+
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+.mySlides2 {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+
+}
+
+/* Caption text */
+.text {
+  color: $color_amaranth;
+  font-size: 20px;
+  padding: 8px 11px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: $black_80;
+  padding: 10px;
+}
+.grid-item {
+  background-color: $white_80;
+  border: 1px solid $black_80;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}

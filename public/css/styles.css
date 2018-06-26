@@ -1,13 +1,72 @@
+html, body {
+    background: linear-gradient(to right, dimgrey , white);
+    color: #636b6f;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    height: 100vh;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
+a{
+    color: black;
+}
+/* Style the body */
+
+
+/* Header/logo Title */
+.header {
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+
+/* Column container */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* Main column */
+.main {
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+img{
+    width: 100px;
+    height: 100px;
+    position:relative;
+    bottom:2em;
+}
+/* Fake image, just for this example */
+.collyimg {
+
+    width: 100%;
+    padding: 20px;
+}
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     background-color: #333;
+
+
 }
 
 li {
     float: left;
+
 }
 
 li a {
@@ -16,12 +75,67 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+
+
+
 }
 
 li a:hover:not(.active) {
-    background-color: #111;
+    background-color: green;
 }
+
 
 .active {
     background-color: #4CAF50;
 }
+h1{
+    color: black;
+    text-align: center;
+}
+.contact{
+    text-align: center;
+    color:black;
+    font-size: 25px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    top:52px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.goButton{
+    text-align: center;
+}
+@media screen and (max-width: 700px) {
+    .row, .navbar {
+        flex-direction: column;
+    }
+}
+
+.goButton {
+    text-align: center;
+}
+@media screen and(max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+
