@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class Admin extends Authenticatable
 {
     use Notifiable;
 
@@ -14,8 +14,12 @@ class User extends Authenticatable
      *
      * @var array
      */
+    protected $guard = 'admin';
+
+    protected $table = 'admins';
+
     protected $fillable = [
-        'name', 'email', 'password', 'admin',
+        'name', 'email', 'job_title', 'password',
     ];
 
     /**
@@ -27,7 +31,11 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function posts(){
-        return $this->hasMany('App\Post');
+    public function comment(){
+        return $this->hasMany('App\Comment');
     }
+
+
+
+
 }
